@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+/* =========================================================================
+   CALM COWBOY HERITAGE & NATURAL RETRO PALETTES
+   ========================================================================= */
+
+:root,
+html[data-theme="saddle-parchment"],
+.theme-saddle-parchment {
+  --bg-base: #F7F4EE;
+  --bg-surface: #FFFFFF;
+  --bg-surface-alt: #EFE8DC;
+  --bg-tag: #F1ECE2;
+  --accent: #8B4513;
+  --accent-hover: #70360D;
+  --accent-soft: rgba(139, 69, 19, 0.08);
+  --border: #DDD4C7;
+  --border-strong: #BAAA98;
+  --text-main: #2D251F;
+  --text-muted: #6E6257;
+  --text-heading: #1B1511;
+  --card-shadow: 0 4px 18px -2px rgba(45, 37, 31, 0.05), 0 2px 6px -1px rgba(45, 37, 31, 0.03);
+}
+
+html[data-theme="tobacco-denim"],
+.theme-tobacco-denim {
+  --bg-base: #F5EFE6;
+  --bg-surface: #FFFFFF;
+  --bg-surface-alt: #EBE1D3;
+  --bg-tag: #EDE4D8;
+  --accent: #2B4A6F;
+  --accent-hover: #1E3755;
+  --accent-soft: rgba(43, 74, 111, 0.08);
+  --border: #D8CCBD;
+  --border-strong: #B3A390;
+  --text-main: #222831;
+  --text-muted: #645D56;
+  --text-heading: #141A22;
+  --card-shadow: 0 4px 18px -2px rgba(34, 40, 49, 0.05), 0 2px 6px -1px rgba(34, 40, 49, 0.03);
+}
+
+html[data-theme="prairie-sage"],
+.theme-prairie-sage {
+  --bg-base: #F2F4EE;
+  --bg-surface: #FFFFFF;
+  --bg-surface-alt: #E5E9DF;
+  --bg-tag: #E7EBDD;
+  --accent: #446343;
+  --accent-hover: #334D32;
+  --accent-soft: rgba(68, 99, 67, 0.08);
+  --border: #CCD2C6;
+  --border-strong: #A8B2A0;
+  --text-main: #202A20;
+  --text-muted: #5F685D;
+  --text-heading: #131A13;
+  --card-shadow: 0 4px 18px -2px rgba(32, 42, 32, 0.05), 0 2px 6px -1px rgba(32, 42, 32, 0.03);
+}
+
+html[data-theme="canyon-terracotta"],
+.theme-canyon-terracotta {
+  --bg-base: #FAF4ED;
+  --bg-surface: #FFFFFF;
+  --bg-surface-alt: #EFE2D5;
+  --bg-tag: #F2E6DC;
+  --accent: #B85331;
+  --accent-hover: #963F22;
+  --accent-soft: rgba(184, 83, 49, 0.08);
+  --border: #E5D5C6;
+  --border-strong: #C4AE9B;
+  --text-main: #30201A;
+  --text-muted: #755E53;
+  --text-heading: #20130E;
+  --card-shadow: 0 4px 18px -2px rgba(48, 32, 26, 0.05), 0 2px 6px -1px rgba(48, 32, 26, 0.03);
+}
+
+html[data-theme="campfire-midnight"],
+.theme-campfire-midnight {
+  --bg-base: #181412;
+  --bg-surface: #221C18;
+  --bg-surface-alt: #2C241F;
+  --bg-tag: #2C231C;
+  --accent: #E5A85C;
+  --accent-hover: #F2BA74;
+  --accent-soft: rgba(229, 168, 92, 0.12);
+  --border: #3B3028;
+  --border-strong: #5A4B40;
+  --text-main: #F5ECE2;
+  --text-muted: #A8988B;
+  --text-heading: #FFFFFF;
+  --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.35);
+}
+
+/* =========================================================================
+   BASE BODY SETUP & TYPOGRAPHY
+   ========================================================================= */
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-main);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+code, pre, .font-mono {
+  font-family: var(--font-mono), monospace;
+}
+
+/* Subtle Organic Paper Grain (Non-flickering, gentle tactile warmth) */
+.vintage-paper-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+  background-image: radial-gradient(#000 0.75px, transparent 0.75px);
+  background-size: 16px 16px;
+}
+
+/* =========================================================================
+   VINTAGE HERITAGE CARDS & BUTTONS (Clean, welcoming, HR & Engineer approved)
+   ========================================================================= */
+
+.vintage-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.vintage-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: 0 8px 24px -4px rgba(45, 37, 31, 0.08);
+}
+
+.vintage-btn {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  padding: 0.45rem 0.85rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.15s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.vintage-btn:hover {
+  background-color: var(--bg-surface-alt);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.vintage-btn:active {
+  transform: translateY(0);
+}
+
+.vintage-btn-primary {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.vintage-btn-primary:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #FFFFFF;
+}
+
+/* Vintage Stamp / Pill Badges */
+.vintage-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background-color: var(--bg-tag);
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  color: var(--text-muted);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Selection Color */
+::selection {
+  background: var(--accent);
+  color: #FFFFFF;
+}

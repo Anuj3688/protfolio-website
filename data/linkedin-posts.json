@@ -1,0 +1,38 @@
+[
+  {
+    "id": "rfc-001",
+    "title": "Zero-Data-Loss Double-Entry Ledger: Designing Idempotency Under High Concurrency",
+    "summary": "Deep dive into designing bank-grade immutable financial ledgers. How we implemented optimistic locking, deterministic transaction hashing, and transactional outbox patterns to guarantee zero anomalies across 40k+ TPS.",
+    "tags": ["#SystemDesign", "#Fintech", "#DistributedLedgers", "#PostgreSQL"],
+    "readTime": "6 min read",
+    "publishedDate": "2024-08-14",
+    "linkedInUrl": "https://www.linkedin.com/in/anujtiwari2001/"
+  },
+  {
+    "id": "rfc-002",
+    "title": "Distributed Sagas vs 2-Phase Commit in Real-Time Payment Gateways",
+    "summary": "Analyzing failure modes when orchestrating multi-party bank settlements. Why choreographic Sagas with compensating actions outshine distributed 2PC across cross-border payment networks, and how to tame partial failures.",
+    "tags": ["#DistributedSystems", "#SagaPattern", "#Kafka", "#Microservices"],
+    "readTime": "8 min read",
+    "publishedDate": "2024-06-22",
+    "linkedInUrl": "https://www.linkedin.com/in/anujtiwari2001/"
+  },
+  {
+    "id": "rfc-003",
+    "title": "Taming P99 Tail Latency in Event-Driven Order Matching Engines",
+    "summary": "Benchmarking lock-free ring buffers (LMAX Disruptor), kernel bypass networking, and zero-allocation memory pools in low-latency transaction routing. Dropping P99 response times from 42ms down to 3.8ms.",
+    "tags": ["#LowLatency", "#Concurrency", "#Performance", "#Go", "#Java"],
+    "readTime": "5 min read",
+    "publishedDate": "2024-04-10",
+    "linkedInUrl": "https://www.linkedin.com/in/anujtiwari2001/"
+  },
+  {
+    "id": "rfc-004",
+    "title": "Kafka Partitioning Strategies for Strict Sequential Account Ordering",
+    "summary": "How to prevent race conditions in financial ledger account balancing while preserving massive parallel throughput across distributed Kafka clusters with custom keyed partitioners.",
+    "tags": ["#Kafka", "#EventStreaming", "#FintechArch", "#HighThroughput"],
+    "readTime": "7 min read",
+    "publishedDate": "2024-01-18",
+    "linkedInUrl": "https://www.linkedin.com/in/anujtiwari2001/"
+  }
+]
