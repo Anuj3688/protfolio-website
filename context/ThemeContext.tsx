@@ -85,6 +85,7 @@ interface ThemeContextType {
   togglePaperTexture: () => void;
   toggleSound: () => void;
   playSoftClick: (freq?: number, duration?: number) => void;
+  playBlip: (freq?: number, duration?: number) => void;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -237,6 +238,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         togglePaperTexture,
         toggleSound,
         playSoftClick,
+        playBlip: playSoftClick,
       }}
     >
       <div
