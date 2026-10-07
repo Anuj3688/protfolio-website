@@ -66,7 +66,7 @@ export default function Header() {
             </a>
 
             <a
-              href="https://github.com/anujtiwari"
+              href="https://github.com/Anuj3688"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => playSoftClick(440, 0.03)}

@@ -9,7 +9,7 @@ export async function GET(request: NextRequest) {
     const username =
       searchParams.get("username") ||
       process.env.GITHUB_USERNAME ||
-      "anujtiwari";
+      "Anuj3688";
     const repos = await fetchTopGitHubRepos(username);
 
     return NextResponse.json(

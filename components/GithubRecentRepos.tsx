@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { GitBranch, GitCommit, Star, ExternalLink, RefreshCw, Code2, CheckCircle2 } from "lucide-react";
 import { FormattedRepo, FALLBACK_REPOS } from "@/lib/github";
 import { useTheme } from "@/context/ThemeContext";
+import { GithubIcon } from "@/components/BrandIcons";
 
 export default function GithubRecentRepos() {
   const { playSoftClick } = useTheme();
@@ -48,7 +49,7 @@ export default function GithubRecentRepos() {
           </h2>
         </div>
 
-        <div className="flex items-center gap-2.5">
+        <div className="flex flex-wrap items-center gap-2.5">
           <span className="text-xs text-[var(--text-muted)] hidden sm:inline">
             Last Synced: {lastRefreshed}
           </span>
@@ -61,6 +62,17 @@ export default function GithubRecentRepos() {
             <RefreshCw className={`w-3.5 h-3.5 text-[var(--accent)] ${loading ? "animate-spin" : ""}`} />
             <span>{loading ? "Syncing..." : "Sync Repos"}</span>
           </button>
+          <a
+            href="https://github.com/Anuj3688"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => playSoftClick(500, 0.03)}
+            className="vintage-btn-primary"
+            title="Open GitHub Profile"
+          >
+            <GithubIcon className="w-3.5 h-3.5" />
+            <span>github.com/Anuj3688</span>
+          </a>
         </div>
       </div>
 

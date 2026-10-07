@@ -28,42 +28,63 @@ export interface FormattedRepo {
 
 export const FALLBACK_REPOS: FormattedRepo[] = [
   {
-    id: 101,
-    name: "omni-ledger-engine",
-    description: "High-throughput distributed immutable double-entry ledger with Saga orchestration, transactional outbox, and zero-loss audit stream.",
-    url: "https://github.com/anujtiwari/omni-ledger-engine",
-    language: "Go",
-    stars: 142,
-    pushedAt: new Date(Date.now() - 1000 * 60 * 60 * 3).toISOString(),
-    timeAgo: "3 hours ago",
+    id: 1409202254,
+    name: "protfolio-website",
+    description: "Production-ready Retro Fintech portfolio built with Next.js App Router, TypeScript, and Progressive Web App (PWA) architecture.",
+    url: "https://github.com/Anuj3688/protfolio-website",
+    language: "TypeScript",
+    stars: 1,
+    pushedAt: new Date(Date.now() - 1000 * 60 * 30).toISOString(),
+    timeAgo: "recently",
     branch: "main",
-    commitHash: "7f8b9e1",
+    commitHash: "27eb114",
   },
   {
     id: 102,
-    name: "low-latency-order-router",
-    description: "Lock-free LMAX Disruptor order matching & payment routing gateway. Sub-4ms P99 latency with zero-copy serialization.",
-    url: "https://github.com/anujtiwari/low-latency-order-router",
+    name: "OmniLedger",
+    description: "High-concurrency, ACID-compliant fund transfer service built with Spring Boot and PostgreSQL, featuring a double-entry ledger system and deadlock prevention.",
+    url: "https://github.com/Anuj3688/OmniLedger",
     language: "Java",
-    stars: 98,
-    pushedAt: new Date(Date.now() - 1000 * 60 * 60 * 18).toISOString(),
-    timeAgo: "18 hours ago",
-    branch: "master",
-    commitHash: "3a4c5d6",
+    stars: 1,
+    pushedAt: new Date(Date.now() - 1000 * 60 * 60 * 24).toISOString(),
+    timeAgo: "1d ago",
+    branch: "main",
+    commitHash: "4c7e8a1",
   },
   {
     id: 103,
-    name: "fintech-saga-orchestrator",
-    description: "Distributed transaction coordinator supporting 2PC fallbacks, idempotency keys, and automated compensation for bank settlement rails.",
-    url: "https://github.com/anujtiwari/fintech-saga-orchestrator",
-    language: "TypeScript",
-    stars: 76,
-    pushedAt: new Date(Date.now() - 1000 * 60 * 60 * 42).toISOString(),
-    timeAgo: "2 days ago",
+    name: "HouseHelpBookingSystem",
+    description: "Enterprise booking microservices with Spring Boot RESTful architecture, transactional integrity, and relational data modeling.",
+    url: "https://github.com/Anuj3688/HouseHelpBookingSystem",
+    language: "Java",
+    stars: 1,
+    pushedAt: new Date(Date.now() - 1000 * 60 * 60 * 48).toISOString(),
+    timeAgo: "2d ago",
     branch: "main",
     commitHash: "9e1a2f3",
   },
 ];
+
+export function getSmartDescription(name: string, description: string | null): string {
+  if (description && description.trim()) return description;
+  const n = name.toLowerCase();
+  if (n.includes("protfolio") || n.includes("portfolio")) {
+    return "Production-ready Retro Fintech portfolio built with Next.js App Router, TypeScript, and PWA capabilities.";
+  }
+  if (n.includes("omniledger")) {
+    return "High-concurrency, ACID-compliant fund transfer service built with Spring Boot and PostgreSQL, featuring double-entry ledger system.";
+  }
+  if (n.includes("househelp")) {
+    return "Enterprise booking microservices with Spring Boot RESTful architecture, transactional integrity, and relational data modeling.";
+  }
+  if (n.includes("expence") || n.includes("expense")) {
+    return "High-performance expense splitting and debt settlement engine written in Go with concurrency safety.";
+  }
+  if (n.includes("neetcode")) {
+    return "Optimized algorithmic solutions for data structures, dynamic programming, and distributed system problems.";
+  }
+  return "Backend service repository featuring high-throughput processing, clean architecture, and rigorous validation.";
+}
 
 export function formatTimeAgo(isoString: string): string {
   try {
@@ -97,7 +118,7 @@ export function generatePseudoHash(name: string): string {
   return Math.abs(hash).toString(16).padStart(7, "0").slice(0, 7);
 }
 
-export async function fetchTopGitHubRepos(username: string = "anujtiwari"): Promise<FormattedRepo[]> {
+export async function fetchTopGitHubRepos(username: string = "Anuj3688"): Promise<FormattedRepo[]> {
   const headers: Record<string, string> = {
     Accept: "application/vnd.github.v3+json",
     "User-Agent": "RetroFintechPortfolio/1.0",
@@ -134,9 +155,9 @@ export async function fetchTopGitHubRepos(username: string = "anujtiwari"): Prom
       .map((repo) => ({
         id: repo.id,
         name: repo.name,
-        description: repo.description || "Production-grade backend service and distributed systems repository.",
+        description: getSmartDescription(repo.name, repo.description),
         url: repo.html_url,
-        language: repo.language || "TypeScript",
+        language: repo.language || (repo.name.toLowerCase().includes("go") ? "Go" : repo.name.toLowerCase().includes("java") ? "Java" : "TypeScript"),
         stars: repo.stargazers_count,
         pushedAt: repo.pushed_at,
         timeAgo: formatTimeAgo(repo.pushed_at),

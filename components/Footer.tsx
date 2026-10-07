@@ -69,14 +69,14 @@ export default function Footer() {
             <span className="opacity-30">•</span>
 
             <a
-              href="https://github.com/anujtiwari"
+              href="https://github.com/Anuj3688"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => playSoftClick(490, 0.02)}
               className="hover:text-[var(--accent)] transition-colors flex items-center gap-1.5"
             >
               <GithubIcon className="w-3.5 h-3.5 text-[var(--accent)]" />
-              <span>GitHub</span>
+              <span>github.com/Anuj3688</span>
             </a>
 
             <span className="opacity-30">•</span>
