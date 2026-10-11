@@ -30,21 +30,25 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Anuj Tiwari | Senior Backend & Distributed Systems Engineer",
+  title: "Anuj Tiwari | Backend Engineer • Distributed Systems & Event-Driven Architecture",
   description:
-    "Senior Backend Engineer specializing in high-throughput transaction engines, low-latency financial ledgers, and zero-data-loss distributed architectures.",
+    "Backend Engineer with 4 years of experience specializing in distributed systems, event-driven architectures, Java microservices, and Kafka/RabbitMQ workflows at PhonePe Invest and Hexaware.",
   keywords: [
+    "Anuj Tiwari",
     "Backend Engineer",
     "Distributed Systems",
-    "Fintech",
-    "High Throughput",
-    "Kafka",
-    "RabbitMQ",
+    "Event-Driven Architecture",
     "Java",
     "Spring Boot",
-    "Node.js",
+    "Dropwizard",
+    "RabbitMQ",
+    "Kafka",
+    "Azure Cosmos DB",
     "PostgreSQL",
-    "PhonePe",
+    "Saga Pattern",
+    "PhonePe Invest",
+    "Microservices",
+    "High Availability",
   ],
   authors: [{ name: "Anuj Tiwari" }],
   manifest: "/manifest.webmanifest",
@@ -64,9 +68,9 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Anuj Tiwari | Senior Backend & Distributed Systems Engineer",
+    title: "Anuj Tiwari | Backend Engineer • Distributed Systems & Event-Driven Architecture",
     description:
-      "4 Years Track Record in High-Scale Fintech Systems, Low-Latency Architecture, and Event-Driven Ledgers.",
+      "4 Years Track Record in High-Scale Fintech Systems, Distributed Systems, Event-Driven Architectures, and Microservices.",
     type: "website",
   },
 };

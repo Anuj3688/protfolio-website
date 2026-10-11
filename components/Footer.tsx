@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { ArrowUp, Compass, Mail, Phone } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/BrandIcons";
 import { useTheme } from "@/context/ThemeContext";
@@ -19,15 +20,21 @@ export default function Footer() {
         {/* Main Footer Row */}
         <div className="flex flex-col md:flex-row items-center justify-between pb-8 border-b border-[var(--border)] gap-6">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-md bg-[var(--bg-surface-alt)] border border-[var(--border)] flex items-center justify-center text-[var(--accent)]">
-              <Compass className="w-5 h-5" />
+            <div className="relative w-9 h-9 rounded-md overflow-hidden border border-[var(--border)] bg-[var(--bg-surface-alt)] shadow-xs shrink-0">
+              <Image
+                src="/anuj-tiwari.jpg"
+                alt="Anuj Tiwari"
+                width={36}
+                height={36}
+                className="w-full h-full object-cover object-top"
+              />
             </div>
             <div>
               <span className="font-bold font-serif text-lg text-[var(--text-heading)] block leading-tight">
                 Anuj Tiwari
               </span>
               <span className="text-xs text-[var(--text-muted)]">
-                Backend Engineer • Share.Market by PhonePe • Bangalore, India
+                Backend Engineer • PhonePe Invest • Bangalore, India
               </span>
             </div>
           </div>

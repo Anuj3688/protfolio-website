@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import ThemeSwitch from "@/components/ThemeSwitch";
 import { FileText, Compass, Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/BrandIcons";
@@ -16,15 +17,17 @@ export default function Header() {
         <div className="flex items-center gap-3">
           <span className="flex items-center gap-1.5 font-medium text-[var(--text-main)]">
             <span className="inline-block w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
-            <span>BACKEND ENGINEER • SHARE.MARKET BY PHONEPE (BANGALORE)</span>
+            <span>BACKEND ENGINEER • PHONEPE INVEST (BANGALORE)</span>
           </span>
           <span className="opacity-40">•</span>
-          <span>4 YEARS IN DISTRIBUTED SYSTEMS &amp; EVENT-DRIVEN WORKFLOWS</span>
+          <span>4 YEARS IN DISTRIBUTED SYSTEMS &amp; EVENT-DRIVEN ARCHITECTURES</span>
         </div>
         <div className="flex items-center gap-3 font-mono text-[10px]">
-          <span>ACTIVATION SLA: 98%</span>
+          <span>YATRA JOURNEY: 10K+ FLOWS</span>
           <span className="opacity-40">•</span>
-          <span>TAT: 32H (-48%)</span>
+          <span>MANUAL OPS SAVED: 10,000+ HRS</span>
+          <span className="opacity-40">•</span>
+          <span>VISIBILITY: 10% → 90%</span>
           <span className="opacity-40">•</span>
           <span>B.E. CS: 9.2 CGPA</span>
         </div>
@@ -34,8 +37,15 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center justify-between gap-4">
         {/* Left: Brand Identity */}
         <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-md bg-[var(--bg-surface-alt)] border border-[var(--border-strong)] flex items-center justify-center text-[var(--accent)] shadow-xs">
-            <Compass className="w-5 h-5" />
+          <div className="relative w-9 h-9 rounded-md overflow-hidden border border-[var(--border-strong)] bg-[var(--bg-surface-alt)] shadow-xs shrink-0">
+            <Image
+              src="/anuj-tiwari.jpg"
+              alt="Anuj Tiwari"
+              width={36}
+              height={36}
+              priority
+              className="w-full h-full object-cover object-top"
+            />
           </div>
           <div>
             <a
@@ -46,7 +56,7 @@ export default function Header() {
               Anuj Tiwari
             </a>
             <span className="text-[11px] sm:text-xs text-[var(--text-muted)] font-medium block">
-              Backend Engineer • Share.Market by PhonePe
+              Backend Engineer • PhonePe Invest
             </span>
           </div>
         </div>
