@@ -1,38 +1,42 @@
 [
   {
-    "id": "rfc-001",
-    "title": "Zero-Data-Loss Double-Entry Ledger: Designing Idempotency Under High Concurrency",
-    "summary": "Deep dive into designing bank-grade immutable financial ledgers. How we implemented optimistic locking, deterministic transaction hashing, and transactional outbox patterns to guarantee zero anomalies across 40k+ TPS.",
-    "tags": ["#SystemDesign", "#Fintech", "#DistributedLedgers", "#PostgreSQL"],
-    "readTime": "6 min read",
-    "publishedDate": "2024-08-14",
-    "linkedInUrl": "https://www.linkedin.com/in/anujtiwari2001/"
+    "id": "li-article-01",
+    "title": "Beyond the Syntax: Why Reading is the Ultimate Superpower in the Age of AI",
+    "summary": "We live in an era where writing code has never been easier. With AI assistants generating boilerplate, functions, and modules in seconds, the engineering bottleneck has shifted. It is no longer about how fast you type, but how deeply you comprehend system architecture, RFCs, and edge cases. In the age of AI, reading is the ultimate engineering superpower.",
+    "tags": ["#ArtificialIntelligence", "#SoftwareEngineering", "#SystemDesign", "#ContinuousLearning"],
+    "readTime": "4 min read",
+    "publishedDate": "2024-08-25",
+    "type": "Article",
+    "linkedInUrl": "https://www.linkedin.com/in/anujtiwari2001/recent-activity/articles/"
   },
   {
-    "id": "rfc-002",
-    "title": "Distributed Sagas vs 2-Phase Commit in Real-Time Payment Gateways",
-    "summary": "Analyzing failure modes when orchestrating multi-party bank settlements. Why choreographic Sagas with compensating actions outshine distributed 2PC across cross-border payment networks, and how to tame partial failures.",
-    "tags": ["#DistributedSystems", "#SagaPattern", "#Kafka", "#Microservices"],
-    "readTime": "8 min read",
-    "publishedDate": "2024-06-22",
-    "linkedInUrl": "https://www.linkedin.com/in/anujtiwari2001/"
-  },
-  {
-    "id": "rfc-003",
-    "title": "Taming P99 Tail Latency in Event-Driven Order Matching Engines",
-    "summary": "Benchmarking lock-free ring buffers (LMAX Disruptor), kernel bypass networking, and zero-allocation memory pools in low-latency transaction routing. Dropping P99 response times from 42ms down to 3.8ms.",
-    "tags": ["#LowLatency", "#Concurrency", "#Performance", "#Go", "#Java"],
+    "id": "li-article-02",
+    "title": "The Recon Job That Changed the System: A Lesson in High-Volume Financial Consistency",
+    "summary": "A reconciliation job for one segment sounded harmless. Then we had five. How conducting deep root-cause analysis (RCA) on ledger data discrepancies transformed our approach to batch processing, repository-level invariants, and asynchronous consistency across multi-party financial reconciliation workflows.",
+    "tags": ["#Fintech", "#FinancialRecon", "#DataPipelines", "#PostgreSQL"],
     "readTime": "5 min read",
-    "publishedDate": "2024-04-10",
-    "linkedInUrl": "https://www.linkedin.com/in/anujtiwari2001/"
+    "publishedDate": "2024-08-22",
+    "type": "Article",
+    "linkedInUrl": "https://www.linkedin.com/in/anujtiwari2001/recent-activity/articles/"
   },
   {
-    "id": "rfc-004",
-    "title": "Kafka Partitioning Strategies for Strict Sequential Account Ordering",
-    "summary": "How to prevent race conditions in financial ledger account balancing while preserving massive parallel throughput across distributed Kafka clusters with custom keyed partitioners.",
-    "tags": ["#Kafka", "#EventStreaming", "#FintechArch", "#HighThroughput"],
-    "readTime": "7 min read",
-    "publishedDate": "2024-01-18",
-    "linkedInUrl": "https://www.linkedin.com/in/anujtiwari2001/"
+    "id": "li-post-01",
+    "title": "ProbSol Materialised: An Engineering Thought Vault to Declutter Builder Minds",
+    "summary": "How many times have you had a breakthrough idea or encountered a complex bug... only to forget it 2 hours later? As builders, our heads are constantly buzzing with scattered notes across tabs, mixing up active bugs, ideas, and solutions. That's why I built ProbSol Materialised — a dedicated thought vault designed to declutter your mind and segregate thought patterns.",
+    "tags": ["#WebDevelopment", "#Productivity", "#BuilderMindset", "#FullStack"],
+    "readTime": "3 min read",
+    "publishedDate": "2024-10-11",
+    "type": "Post",
+    "linkedInUrl": "https://www.linkedin.com/in/anujtiwari2001/recent-activity/posts/"
+  },
+  {
+    "id": "li-post-02",
+    "title": "Can a Software Engineer Bleed Code?",
+    "summary": "What if the best software engineers don't just write code... they bleed it? Inspired by EPR's 'bleed ink' on Hustle, reflecting on reaching a plane where engineering isn't just about 'knowing Java' or 'having 4 years of experience', but reaching an instinctive level where concurrency hazards, architectural trade-offs, and craftsmanship flow naturally.",
+    "tags": ["#SoftwareCraftsmanship", "#EngineeringCulture", "#BackendEngineering", "#Mindset"],
+    "readTime": "3 min read",
+    "publishedDate": "2024-09-15",
+    "type": "Post",
+    "linkedInUrl": "https://www.linkedin.com/in/anujtiwari2001/recent-activity/posts/"
   }
 ]

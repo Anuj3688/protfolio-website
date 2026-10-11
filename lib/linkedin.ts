@@ -8,6 +8,7 @@ export interface LinkedInDispatch {
   readTime: string;
   publishedDate: string;
   linkedInUrl: string;
+  type?: string;
   isLive?: boolean;
 }
 

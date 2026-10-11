@@ -45,7 +45,7 @@ export default function LinkedInDispatches() {
         <div>
           <div className="flex items-center gap-2 text-xs font-bold text-[var(--accent)] uppercase tracking-wider">
             <BookOpen className="w-4 h-4" />
-            <span>Technical Publications &amp; Writing</span>
+            <span>Published Articles &amp; Posts from LinkedIn</span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-[var(--text-heading)] mt-1">
             Engineering Insights &amp; Dispatches
@@ -56,7 +56,7 @@ export default function LinkedInDispatches() {
           <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--bg-surface-alt)] border border-[var(--border)] text-xs text-[var(--text-muted)]">
             <Radio
               className={`w-3 h-3 ${
-                source !== "fallback" ? "text-emerald-600 animate-pulse" : "text-amber-600"
+                source !== "fallback" ? "text-emerald-600 animate-pulse" : "text-emerald-600"
               }`}
             />
             <span>
@@ -64,7 +64,7 @@ export default function LinkedInDispatches() {
                 ? "LinkedIn Live API"
                 : source === "feed"
                 ? "LinkedIn Live Feed"
-                : "Curated Technical Archive"}
+                : "LinkedIn Feed (@anujtiwari2001)"}
             </span>
           </div>
 
@@ -91,7 +91,7 @@ export default function LinkedInDispatches() {
             <div className="space-y-3">
               <div className="flex items-center justify-between text-xs text-[var(--text-muted)] border-b border-[var(--border)] pb-2.5">
                 <span className="font-semibold text-[var(--accent)]">
-                  {item.isLive ? "Live LinkedIn Article" : `Technical Journal #${index + 1}`}
+                  {item.type ? `LinkedIn ${item.type}` : item.isLive ? "Live LinkedIn Article" : `LinkedIn Dispatch #${index + 1}`}
                 </span>
                 <span>
                   {item.publishedDate} • {item.readTime}
@@ -128,7 +128,7 @@ export default function LinkedInDispatches() {
                 onClick={() => playSoftClick(510, 0.03)}
                 className="vintage-btn w-full justify-center"
               >
-                <span>Read Dispatch on LinkedIn</span>
+                <span>Read {item.type || "Dispatch"} on LinkedIn</span>
                 <ArrowUpRight className="w-4 h-4 text-[var(--accent)]" />
               </a>
             </div>
